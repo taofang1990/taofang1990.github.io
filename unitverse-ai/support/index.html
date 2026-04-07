@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>UnitVerse AI 开发者支持</title>
+  <style>
+    :root {
+      --bg0: #1e3655;
+      --bg1: #3c6c89;
+      --bg2: #6ab6ae;
+      --card: rgba(255,255,255,0.94);
+      --text: #1f2d45;
+      --muted: #5d6c80;
+      --accent: #ecb75f;
+      --accent2: #3d7d7b;
+      --line: rgba(31, 45, 69, 0.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.12), transparent 28%),
+        linear-gradient(135deg, var(--bg0), var(--bg1) 58%, var(--bg2));
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+    .hero, .section {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.52);
+      border-radius: 26px;
+      box-shadow: 0 20px 50px rgba(12, 24, 40, 0.18);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      padding: 22px;
+    }
+    h1, h2, p, li { margin: 0; }
+    h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(236,183,95,0.15);
+      color: #745a1f;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    a.button {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, var(--bg0), var(--accent2));
+      font-weight: 700;
+      margin-top: 12px;
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      background: rgba(236,183,95,0.12);
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: #6a5320;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 10px;
+    }
+    @media (max-width: 760px) {
+      body { padding: 16px; }
+      .hero, .section { border-radius: 22px; padding: 18px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Developer Support</div>
+      <h1>开发者支持</h1>
+      <p>这里是 UnitVerse AI 的支持入口。你可以用它来处理订阅、AI 解析、广告和数据刷新相关问题。</p>
+      <a class="button" href="mailto:support@unitverse.ai">联系支持</a>
+    </section>
+
+    <section class="grid">
+      <article class="section">
+        <h2>常见问题</h2>
+        <ul>
+          <li>AI 解析不工作：确认已在设置里同意第三方 AI 处理授权，且 DeepSeek Key 已配置。</li>
+          <li>订阅没生效：打开“恢复购买”，并确认 App Store Connect 已配置产品 ID。</li>
+          <li>广告没显示：免费版才会请求广告，且需要 AdMob / UMP 正确配置。</li>
+        </ul>
+      </article>
+      <article class="section">
+        <h2>反馈内容</h2>
+        <ul>
+          <li>设备型号和 iOS 版本</li>
+          <li>App 版本号</li>
+          <li>问题发生时你在做什么</li>
+          <li>截图或错误提示</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>说明</h2>
+      <p>如果你是 App Store 审核人员或用户，请先查看隐私政策页面，再联系支持。页面内容与 App 内设置、Review Notes 和 App Privacy 保持一致。</p>
+      <div class="note">提示：如果你之后提供正式仓库地址，这个页面还可以加上“提交 GitHub Issue”的入口，作为第二支持通道。</div>
+    </section>
+  </main>
+</body>
+</html>
